@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import brunaPhoto from "@/assets/bruna-diniz.jpg";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FadeIn from "@/components/FadeIn";
 import {
