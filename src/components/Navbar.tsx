@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/logo-clinica-diniz-full.jpg";
+import logo from "@/assets/logo-clinica-diniz-full.png";
 
 const navItems = [
   { label: "Início", href: "#hero" },
