@@ -1,5 +1,10 @@
 import Navbar from "@/components/Navbar";
 import brunaPhoto from "@/assets/bruna-diniz.jpg";
+import heroAmbiance from "@/assets/hero-ambiance.jpg";
+import sectionConnection from "@/assets/section-connection.jpg";
+import servicesIndividual from "@/assets/services-individual.jpg";
+import servicesCouple from "@/assets/services-couple.jpg";
+import ctaFinal from "@/assets/cta-final.jpg";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FadeIn from "@/components/FadeIn";
 import {
@@ -57,8 +62,8 @@ const Index = () => {
             </FadeIn>
             <FadeIn delay={0.2}>
               <div className="hidden md:flex justify-center">
-                <div className="w-80 h-96 rounded-3xl bg-gradient-to-br from-sage-light to-warm-alt border border-border/50 flex items-end justify-center overflow-hidden">
-                  <div className="w-48 h-64 rounded-t-full bg-gradient-to-b from-muted to-secondary" />
+                <div className="w-80 h-96 rounded-3xl overflow-hidden border border-border/50 shadow-lg">
+                  <img src={heroAmbiance} alt="Ambiente acolhedor" className="w-full h-full object-cover" width={960} height={1152} />
                 </div>
               </div>
             </FadeIn>
@@ -68,8 +73,9 @@ const Index = () => {
       </section>
 
       {/* CONEXÃO EMOCIONAL */}
-      <section className="py-24 md:py-32 bg-muted/40">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-24 md:py-32 bg-muted/40 relative overflow-hidden">
+        <img src={sectionConnection} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.08]" loading="lazy" width={1280} height={640} aria-hidden="true" />
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <FadeIn>
             <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-snug mb-8">
               O problema, muitas vezes, não é falta de esforço.<br />
@@ -160,7 +166,9 @@ const Index = () => {
           </FadeIn>
           <div className="grid md:grid-cols-2 gap-8">
             <FadeIn>
-              <div className="h-full p-8 md:p-10 rounded-2xl bg-card border border-border/50 flex flex-col">
+              <div className="h-full rounded-2xl bg-card border border-border/50 flex flex-col overflow-hidden">
+                <img src={servicesIndividual} alt="Psicoterapia individual" className="w-full h-48 object-cover" loading="lazy" width={800} height={608} />
+                <div className="p-8 md:p-10 flex flex-col flex-1">
                 <Heart size={28} className="text-primary mb-6" strokeWidth={1.5} />
                 <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">Psicoterapia individual</h3>
                 <div className="space-y-4 text-sm text-foreground/75 leading-relaxed flex-1">
@@ -176,10 +184,13 @@ const Index = () => {
                 >
                   Quero agendar →
                 </a>
+                </div>
               </div>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <div className="h-full p-8 md:p-10 rounded-2xl bg-card border border-border/50 flex flex-col">
+              <div className="h-full rounded-2xl bg-card border border-border/50 flex flex-col overflow-hidden">
+                <img src={servicesCouple} alt="Terapia de casal" className="w-full h-48 object-cover" loading="lazy" width={800} height={608} />
+                <div className="p-8 md:p-10 flex flex-col flex-1">
                 <Sparkles size={28} className="text-primary mb-6" strokeWidth={1.5} />
                 <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">Terapia de casal</h3>
                 <div className="space-y-4 text-sm text-foreground/75 leading-relaxed flex-1">
@@ -194,6 +205,7 @@ const Index = () => {
                 >
                   Quero agendar →
                 </a>
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -313,8 +325,9 @@ const Index = () => {
       </section>
 
       {/* CTA FINAL */}
-      <section className="py-24 md:py-36">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      <section className="py-24 md:py-36 relative overflow-hidden">
+        <img src={ctaFinal} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.12]" loading="lazy" width={1280} height={640} aria-hidden="true" />
+        <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
           <FadeIn>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground leading-tight mb-6">
               Começar a se compreender pode ser o primeiro passo para viver com mais clareza.
