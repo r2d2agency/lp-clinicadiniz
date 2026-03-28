@@ -62,8 +62,8 @@ const Index = () => {
             </FadeIn>
             <FadeIn delay={0.2}>
               <div className="hidden md:flex justify-center">
-                <div className="w-80 h-96 rounded-3xl bg-gradient-to-br from-sage-light to-warm-alt border border-border/50 flex items-end justify-center overflow-hidden">
-                  <div className="w-48 h-64 rounded-t-full bg-gradient-to-b from-muted to-secondary" />
+                <div className="w-80 h-96 rounded-3xl overflow-hidden border border-border/50 shadow-lg">
+                  <img src={heroAmbiance} alt="Ambiente acolhedor" className="w-full h-full object-cover" width={960} height={1152} />
                 </div>
               </div>
             </FadeIn>
