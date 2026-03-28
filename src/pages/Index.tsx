@@ -184,10 +184,13 @@ const Index = () => {
                 >
                   Quero agendar →
                 </a>
+                </div>
               </div>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <div className="h-full p-8 md:p-10 rounded-2xl bg-card border border-border/50 flex flex-col">
+              <div className="h-full rounded-2xl bg-card border border-border/50 flex flex-col overflow-hidden">
+                <img src={servicesCouple} alt="Terapia de casal" className="w-full h-48 object-cover" loading="lazy" width={800} height={608} />
+                <div className="p-8 md:p-10 flex flex-col flex-1">
                 <Sparkles size={28} className="text-primary mb-6" strokeWidth={1.5} />
                 <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">Terapia de casal</h3>
                 <div className="space-y-4 text-sm text-foreground/75 leading-relaxed flex-1">
