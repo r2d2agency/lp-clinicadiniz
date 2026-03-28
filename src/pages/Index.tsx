@@ -5,6 +5,7 @@ import sectionConnection from "@/assets/section-connection.jpg";
 import servicesIndividual from "@/assets/services-individual.jpg";
 import servicesCouple from "@/assets/services-couple.jpg";
 import ctaFinal from "@/assets/cta-final.jpg";
+import logo from "@/assets/logo-clinica-diniz.jpg";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FadeIn from "@/components/FadeIn";
 import {
