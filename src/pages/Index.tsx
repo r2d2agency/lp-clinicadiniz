@@ -75,7 +75,7 @@ const Index = () => {
       {/* CONEXÃO EMOCIONAL */}
       <section className="py-24 md:py-32 bg-muted/40 relative overflow-hidden">
         <img src={sectionConnection} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.08]" loading="lazy" width={1280} height={640} aria-hidden="true" />
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <FadeIn>
             <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-snug mb-8">
               O problema, muitas vezes, não é falta de esforço.<br />
