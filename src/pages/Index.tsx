@@ -1,5 +1,10 @@
 import Navbar from "@/components/Navbar";
 import brunaPhoto from "@/assets/bruna-diniz.jpg";
+import heroAmbiance from "@/assets/hero-ambiance.jpg";
+import sectionConnection from "@/assets/section-connection.jpg";
+import servicesIndividual from "@/assets/services-individual.jpg";
+import servicesCouple from "@/assets/services-couple.jpg";
+import ctaFinal from "@/assets/cta-final.jpg";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FadeIn from "@/components/FadeIn";
 import {
