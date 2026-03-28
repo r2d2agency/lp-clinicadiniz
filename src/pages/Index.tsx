@@ -325,7 +325,8 @@ const Index = () => {
       </section>
 
       {/* CTA FINAL */}
-      <section className="py-24 md:py-36">
+      <section className="py-24 md:py-36 relative overflow-hidden">
+        <img src={ctaFinal} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.12]" loading="lazy" width={1280} height={640} aria-hidden="true" />
         <div className="max-w-3xl mx-auto px-6 text-center">
           <FadeIn>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground leading-tight mb-6">
