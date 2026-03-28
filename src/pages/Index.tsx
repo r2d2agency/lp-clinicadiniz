@@ -124,7 +124,7 @@ const Index = () => {
           <div className="grid md:grid-cols-5 gap-12 items-start">
             <FadeIn className="md:col-span-2">
               <div className="sticky top-28">
-                <div className="w-full aspect-[3/4] rounded-2xl bg-gradient-to-br from-secondary to-muted border border-border/50 mb-6" />
+                <img src={brunaPhoto} alt="Bruna Diniz — Psicóloga" className="w-full aspect-[3/4] rounded-2xl object-cover object-top border border-border/50 mb-6 shadow-sm" />
                 <h3 className="font-serif text-2xl font-semibold text-foreground">Bruna Diniz</h3>
                 <p className="text-sm text-muted-foreground mt-1">Psicóloga</p>
                 <p className="text-xs text-muted-foreground mt-0.5">CRP 00/00000</p>
