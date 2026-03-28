@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo-clinica-diniz.jpg";
 
 const navItems = [
   { label: "Início", href: "#hero" },
@@ -29,8 +30,9 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#hero" className="font-serif text-xl md:text-2xl font-semibold text-foreground tracking-wide">
-          Clínica Diniz
+        <a href="#hero" className="flex items-center gap-3">
+          <img src={logo} alt="Clínica Diniz" className="w-9 h-9 rounded-full object-cover" />
+          <span className="font-serif text-xl md:text-2xl font-semibold text-foreground tracking-wide">Clínica Diniz</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">

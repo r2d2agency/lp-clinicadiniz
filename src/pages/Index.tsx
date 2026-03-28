@@ -5,6 +5,7 @@ import sectionConnection from "@/assets/section-connection.jpg";
 import servicesIndividual from "@/assets/services-individual.jpg";
 import servicesCouple from "@/assets/services-couple.jpg";
 import ctaFinal from "@/assets/cta-final.jpg";
+import logo from "@/assets/logo-clinica-diniz.jpg";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FadeIn from "@/components/FadeIn";
 import {
@@ -404,7 +405,10 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
             <div className="text-center md:text-left">
-              <h3 className="font-serif text-2xl font-semibold text-foreground mb-1">Clínica Diniz</h3>
+              <div className="flex items-center gap-3 justify-center md:justify-start mb-2">
+                <img src={logo} alt="Clínica Diniz" className="w-10 h-10 rounded-full object-cover" />
+                <h3 className="font-serif text-2xl font-semibold text-foreground">Clínica Diniz</h3>
+              </div>
               <p className="text-sm text-muted-foreground">Bruna Diniz | Psicóloga — CRP 00/00000</p>
               <p className="text-sm text-muted-foreground mt-1">Atendimento online para todo o Brasil</p>
             </div>
