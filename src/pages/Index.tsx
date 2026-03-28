@@ -134,7 +134,7 @@ const Index = () => {
                 <img src={brunaPhoto} alt="Bruna Diniz — Psicóloga" className="w-full aspect-[3/4] rounded-2xl object-cover object-top border border-border/50 mb-6 shadow-sm" />
                 <h3 className="font-serif text-2xl font-semibold text-foreground">Bruna Diniz</h3>
                 <p className="text-sm text-muted-foreground mt-1">Psicóloga</p>
-                <p className="text-xs text-muted-foreground mt-0.5">CRP 00/00000</p>
+                <p className="text-xs text-muted-foreground mt-0.5">CRP 06/141092</p>
               </div>
             </FadeIn>
             <FadeIn delay={0.1} className="md:col-span-3">
