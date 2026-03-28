@@ -205,6 +205,7 @@ const Index = () => {
                 >
                   Quero agendar →
                 </a>
+                </div>
               </div>
             </FadeIn>
           </div>
