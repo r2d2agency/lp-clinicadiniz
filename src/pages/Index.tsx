@@ -27,7 +27,7 @@ import {
   Instagram,
 } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento.";
+const WHATSAPP_URL = "https://wa.me/5517941601952?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento.";
 
 const Index = () => {
   return (
@@ -134,7 +134,7 @@ const Index = () => {
                 <img src={brunaPhoto} alt="Bruna Diniz — Psicóloga" className="w-full aspect-[3/4] rounded-2xl object-cover object-top border border-border/50 mb-6 shadow-sm" />
                 <h3 className="font-serif text-2xl font-semibold text-foreground">Bruna Diniz</h3>
                 <p className="text-sm text-muted-foreground mt-1">Psicóloga</p>
-                <p className="text-xs text-muted-foreground mt-0.5">CRP 00/00000</p>
+                <p className="text-xs text-muted-foreground mt-0.5">CRP 06/141092</p>
               </div>
             </FadeIn>
             <FadeIn delay={0.1} className="md:col-span-3">
@@ -409,7 +409,7 @@ const Index = () => {
                 <img src={logo} alt="Clínica Diniz" className="w-10 h-10 rounded-full object-cover" />
                 <h3 className="font-serif text-2xl font-semibold text-foreground">Clínica Diniz</h3>
               </div>
-              <p className="text-sm text-muted-foreground">Bruna Diniz | Psicóloga — CRP 00/00000</p>
+              <p className="text-sm text-muted-foreground">Bruna Diniz | Psicóloga — CRP 06/141092</p>
               <p className="text-sm text-muted-foreground mt-1">Atendimento online para todo o Brasil</p>
             </div>
             <div className="flex items-center gap-4">
