@@ -11,7 +11,7 @@ const navItems = [
   { label: "FAQ", href: "#faq" },
 ];
 
-const WHATSAPP_URL = "https://wa.me/5517941601952?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento.";
+const WHATSAPP_URL = "https://wa.me/5511941601952?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento.";?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento.";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
