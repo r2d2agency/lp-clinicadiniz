@@ -64,7 +64,7 @@ const Index = () => {
             <FadeIn delay={0.2}>
               <div className="hidden md:flex justify-center">
                 <div className="w-80 h-96 rounded-3xl overflow-hidden border border-border/50 shadow-lg">
-                  <img src={heroAmbiance} alt="Ambiente acolhedor" className="w-full h-full object-cover" width={960} height={1152} />
+                  <img src={heroAmbiance} alt="Psicóloga Bruna Diniz" className="w-full h-full object-cover object-top" width={928} height={1162} />
                 </div>
               </div>
             </FadeIn>
