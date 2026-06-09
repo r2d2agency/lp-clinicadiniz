@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import brunaPhoto from "@/assets/bruna-diniz.jpg";
 import heroAmbiance from "@/assets/hero-couple.jpg";
@@ -8,7 +7,7 @@ import servicesCouple from "@/assets/services-couple.jpg";
 import ctaFinal from "@/assets/cta-final.jpg";
 import logo from "@/assets/logo-clinica-diniz.jpg";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import EbookDownloadModal from "@/components/EbookDownloadModal";
+import EbookDownloadButton from "@/components/EbookDownloadButton";
 import FadeIn from "@/components/FadeIn";
 import {
   Accordion,
@@ -27,19 +26,15 @@ import {
   Monitor,
   TrendingUp,
   Instagram,
-  BookOpen,
 } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/5511941601952?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento.";
 
 const Index = () => {
-  const [ebookOpen, setEbookOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <WhatsAppButton />
-      <EbookDownloadModal open={ebookOpen} onClose={() => setEbookOpen(false)} />
 
       {/* HERO */}
       <section id="hero" className="relative min-h-screen flex items-center pt-20">
@@ -62,14 +57,9 @@ const Index = () => {
                   >
                     Agendar atendimento
                   </a>
-                  <button
-                    onClick={() => setEbookOpen(true)}
-                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-primary/40 text-primary text-sm font-medium hover:bg-primary/5 transition-colors duration-300"
-                  >
-                    <BookOpen size={16} />
-                    Baixar ebook grátis
-                  </button>
+                  <EbookDownloadButton />
                 </div>
+
                 <p className="text-xs text-muted-foreground mt-4 leading-relaxed">
                   Atendimento online para adultos<br />
                   Psicoterapia individual e de casal
