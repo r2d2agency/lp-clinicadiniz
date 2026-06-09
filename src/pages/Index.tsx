@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import brunaPhoto from "@/assets/bruna-diniz.jpg";
 import heroAmbiance from "@/assets/hero-couple.jpg";
@@ -7,6 +8,7 @@ import servicesCouple from "@/assets/services-couple.jpg";
 import ctaFinal from "@/assets/cta-final.jpg";
 import logo from "@/assets/logo-clinica-diniz.jpg";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import EbookDownloadModal from "@/components/EbookDownloadModal";
 import FadeIn from "@/components/FadeIn";
 import {
   Accordion,
@@ -25,15 +27,19 @@ import {
   Monitor,
   TrendingUp,
   Instagram,
+  BookOpen,
 } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/5511941601952?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento.";
 
 const Index = () => {
+  const [ebookOpen, setEbookOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <WhatsAppButton />
+      <EbookDownloadModal open={ebookOpen} onClose={() => setEbookOpen(false)} />
 
       {/* HERO */}
       <section id="hero" className="relative min-h-screen flex items-center pt-20">
@@ -47,14 +53,23 @@ const Index = () => {
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
                   Psicoterapia online para adultos que desejam compreender seus padrões, sair do automático e construir relações e decisões mais conscientes.
                 </p>
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-8 py-3.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors duration-300"
-                >
-                  Agendar atendimento
-                </a>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-8 py-3.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors duration-300"
+                  >
+                    Agendar atendimento
+                  </a>
+                  <button
+                    onClick={() => setEbookOpen(true)}
+                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-primary/40 text-primary text-sm font-medium hover:bg-primary/5 transition-colors duration-300"
+                  >
+                    <BookOpen size={16} />
+                    Baixar ebook grátis
+                  </button>
+                </div>
                 <p className="text-xs text-muted-foreground mt-4 leading-relaxed">
                   Atendimento online para adultos<br />
                   Psicoterapia individual e de casal
