@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo-clinica-diniz-full.png";
 import EbookDownloadButton from "@/components/EbookDownloadButton";
+
+const EBOOK_URL = "/ebook-bruna-diniz.pdf";
 
 const navItems = [
   { label: "Início", href: "#hero" },
@@ -30,6 +32,24 @@ const Navbar = () => {
         scrolled ? "bg-background/90 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
+      {/* Mobile ebook banner — shown only at the top, disappears on scroll */}
+      <AnimatePresence>
+        {!scrolled && !mobileOpen && (
+          <motion.a
+            href={EBOOK_URL}
+            download="ebook-bruna-diniz.pdf"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden flex items-center justify-center gap-2 bg-primary text-primary-foreground text-xs font-medium px-4 py-2 overflow-hidden"
+          >
+            <BookOpen size={14} />
+            <span>Baixe gratuitamente o ebook</span>
+          </motion.a>
+        )}
+      </AnimatePresence>
+
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#hero" className="flex items-center">
           <img src={logo} alt="Clínica Diniz" className="h-10 md:h-12 w-auto object-contain" />
