@@ -27,6 +27,7 @@ import {
   Monitor,
   TrendingUp,
   Instagram,
+  BookOpen,
 } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/5511941601952?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento.";
