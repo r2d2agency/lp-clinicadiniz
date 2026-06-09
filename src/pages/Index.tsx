@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import brunaPhoto from "@/assets/bruna-diniz.jpg";
 import heroAmbiance from "@/assets/hero-couple.jpg";
@@ -7,6 +8,7 @@ import servicesCouple from "@/assets/services-couple.jpg";
 import ctaFinal from "@/assets/cta-final.jpg";
 import logo from "@/assets/logo-clinica-diniz.jpg";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import EbookDownloadModal from "@/components/EbookDownloadModal";
 import FadeIn from "@/components/FadeIn";
 import {
   Accordion,
