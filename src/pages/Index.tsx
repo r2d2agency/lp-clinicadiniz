@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import brunaPhoto from "@/assets/bruna-diniz.jpg";
-import heroAmbiance from "@/assets/hero-ambiance.jpg";
+import heroAmbiance from "@/assets/hero-couple.jpg";
 import sectionConnection from "@/assets/section-connection.jpg";
 import servicesIndividual from "@/assets/services-individual.jpg";
 import servicesCouple from "@/assets/services-couple.jpg";
