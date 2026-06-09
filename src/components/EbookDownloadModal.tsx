@@ -2,7 +2,6 @@ import { useState } from "react";
 import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, BookOpen, Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
 const leadSchema = z.object({
@@ -18,6 +17,7 @@ const leadSchema = z.object({
 });
 
 const EBOOK_URL = "/ebook-bruna-diniz.pdf";
+const DESTINATION_EMAIL = "contato@dinizpsicologia.com.br";
 
 interface Props {
   open: boolean;
@@ -43,22 +43,20 @@ const EbookDownloadModal = ({ open, onClose }: Props) => {
     }
 
     setLoading(true);
-    const { error } = await supabase.from("ebook_leads").insert({
-      name: parsed.data.name,
-      email: parsed.data.email,
-      phone: parsed.data.phone || null,
-      source: "ebook_download",
-    });
-    setLoading(false);
 
-    if (error) {
-      toast({
-        title: "Não foi possível concluir",
-        description: "Tente novamente em instantes.",
-        variant: "destructive",
-      });
-      return;
-    }
+    // Compose mailto with lead info
+    const subject = encodeURIComponent("Novo cadastro — Ebook");
+    const body = encodeURIComponent(
+      `Novo cadastro para download do ebook:\n\n` +
+        `Nome: ${parsed.data.name}\n` +
+        `Email: ${parsed.data.email}\n` +
+        `WhatsApp: ${parsed.data.phone || "(não informado)"}\n\n` +
+        `Origem: Landing page`
+    );
+    const mailtoUrl = `mailto:${DESTINATION_EMAIL}?subject=${subject}&body=${body}`;
+
+    // Open mail client in new tab (non-blocking)
+    window.open(mailtoUrl, "_blank");
 
     // Trigger download
     const link = document.createElement("a");
@@ -67,6 +65,8 @@ const EbookDownloadModal = ({ open, onClose }: Props) => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+    setLoading(false);
 
     toast({
       title: "Download iniciado",
@@ -115,7 +115,7 @@ const EbookDownloadModal = ({ open, onClose }: Props) => {
             </div>
 
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-2 leading-tight">
-              Receba o ebook no seu email
+              Receba o ebook agora
             </h3>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               Preencha seus dados para baixar gratuitamente.
